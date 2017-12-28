@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pendulum/src/motor_pwm/motor_pwm&apos; to &apos;motor_pwm.h&apos;" description="Rename resource &apos;motor_pwm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/motor_pwm/motor_pwm" name="motor_pwm.h" stamp="1512833521284" updateReferences="true"/>
+</session>

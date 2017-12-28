@@ -1,0 +1,98 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=0,
+xmax=20000,
+xlabel style={font=\color{white!15!black}},
+xlabel={Clocks},
+ymin=0,
+ymax=3500,
+ylabel style={font=\color{white!15!black}},
+ylabel={Value},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={PWM, Internal Signals},
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+0	0\\
+2273.08333638863	2273\\
+4546.16667277727	0\\
+6819.2500091659	2273\\
+9092.33334555454	0\\
+11365.4166819432	2273\\
+13638.5000183318	0\\
+15911.5833547204	2273\\
+18184.6666911091	0\\
+20000.7332722273	1816.79929577465\\
+};
+\addlegendentry{Counter}
+
+\addplot [color=mycolor2]
+  table[row sep=crcr]{%
+0	0\\
+1135.0416131989	0\\
+1137.04168652612	2000\\
+3409.12498625115	2000\\
+3411.12505957837	0\\
+5681.20828597617	0\\
+5683.20835930339	2000\\
+7955.29165902841	2000\\
+7957.29173235564	0\\
+10227.3749587534	0\\
+10229.3750320807	2000\\
+12501.4583318057	2000\\
+12503.4584051329	0\\
+14773.5416315307	0\\
+14775.5417048579	2000\\
+17047.625004583	2000\\
+17049.6250779102	0\\
+19319.708304308	0\\
+19321.7083776352	2000\\
+20000.7332722273	2000\\
+};
+\addlegendentry{PWM}
+
+\addplot [color=mycolor3]
+  table[row sep=crcr]{%
+0	0\\
+2271.08326306141	0\\
+2273.08333638863	2000\\
+2275.08340971586	0\\
+6817.24993583868	0\\
+6819.2500091659	2000\\
+6821.25008249313	0\\
+11363.4166086159	0\\
+11365.4166819432	2000\\
+11367.4167552704	0\\
+15909.5832813932	0\\
+15911.5833547204	2000\\
+15913.5834280477	0\\
+20000.7332722273	0\\
+};
+\addlegendentry{TOP}
+
+\addplot [color=black, dashed]
+  table[row sep=crcr]{%
+0	1136\\
+20000	1136\\
+};
+\addlegendentry{Compare}
+
+\end{axis}
+\end{tikzpicture}%

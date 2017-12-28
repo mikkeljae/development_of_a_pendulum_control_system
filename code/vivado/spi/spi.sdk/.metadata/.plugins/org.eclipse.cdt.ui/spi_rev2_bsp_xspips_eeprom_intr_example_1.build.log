@@ -1,0 +1,8 @@
+13:29:15 **** Incremental Build of configuration Debug for project spi_rev2_bsp_xspips_eeprom_intr_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+13:29:15 Build Finished (took 153ms)
+

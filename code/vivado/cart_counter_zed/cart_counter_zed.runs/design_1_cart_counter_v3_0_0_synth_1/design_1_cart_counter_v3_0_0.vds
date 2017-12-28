@@ -1,0 +1,396 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Dec 10 20:44:33 2017
+# Process ID: 16621
+# Current directory: /home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.runs/design_1_cart_counter_v3_0_0_synth_1
+# Command line: vivado -log design_1_cart_counter_v3_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_cart_counter_v3_0_0.tcl
+# Log file: /home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.runs/design_1_cart_counter_v3_0_0_synth_1/design_1_cart_counter_v3_0_0.vds
+# Journal file: /home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.runs/design_1_cart_counter_v3_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_cart_counter_v3_0_0.tcl -notrace
+Command: synth_design -top design_1_cart_counter_v3_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16672 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.637 ; gain = 68.996 ; free physical = 155 ; free virtual = 8773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_cart_counter_v3_0_0' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ip/design_1_cart_counter_v3_0_0/synth/design_1_cart_counter_v3_0_0.vhd:88]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'cart_counter_v3_v1_0' declared at '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0.vhd:5' bound to instance 'U0' of component 'cart_counter_v3_v1_0' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ip/design_1_cart_counter_v3_0_0/synth/design_1_cart_counter_v3_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'cart_counter_v3_v1_0' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0.vhd:54]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'cart_counter_v3_v1_0_S00_AXI' declared at '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:5' bound to instance 'cart_counter_v3_v1_0_S00_AXI_inst' of component 'cart_counter_v3_v1_0_S00_AXI' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'cart_counter_v3_v1_0_S00_AXI' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:91]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:243]
+INFO: [Synth 8-226] default block is never used [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:373]
+INFO: [Synth 8-3491] module 'cart_counter' declared at '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:26' bound to instance 'cart_counter_inst' of component 'cart_counter' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:410]
+INFO: [Synth 8-638] synthesizing module 'cart_counter' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:39]
+INFO: [Synth 8-3491] module 'incremental_quadrature' declared at '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:34' bound to instance 'incr_quad_inst' of component 'incremental_quadrature' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'incremental_quadrature' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:44]
+WARNING: [Synth 8-614] signal 'last_A_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+WARNING: [Synth 8-614] signal 'last_B_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+WARNING: [Synth 8-614] signal 'last_Z_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+WARNING: [Synth 8-614] signal 'A' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+WARNING: [Synth 8-614] signal 'B' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+WARNING: [Synth 8-614] signal 'Z' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'incremental_quadrature' (1#1) [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:44]
+WARNING: [Synth 8-614] signal 'counter_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:95]
+WARNING: [Synth 8-614] signal 'last_T_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:108]
+WARNING: [Synth 8-614] signal 'D_i' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'cart_counter' (2#1) [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:39]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:241]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:372]
+INFO: [Synth 8-256] done synthesizing module 'cart_counter_v3_v1_0_S00_AXI' (3#1) [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'cart_counter_v3_v1_0' (4#1) [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/hdl/cart_counter_v3_v1_0.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'design_1_cart_counter_v3_0_0' (5#1) [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ip/design_1_cart_counter_v3_0_0/synth/design_1_cart_counter_v3_0_0.vhd:88]
+WARNING: [Synth 8-3331] design cart_counter has unconnected port Z
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design cart_counter_v3_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.137 ; gain = 109.496 ; free physical = 192 ; free virtual = 8756
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.137 ; gain = 109.496 ; free physical = 177 ; free virtual = 8743
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1560.176 ; gain = 0.000 ; free physical = 210 ; free virtual = 8009
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 343 ; free virtual = 8143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 343 ; free virtual = 8143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 344 ; free virtual = 8145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "T_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "T_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "T_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "D_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'D_i_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'T_i_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:62]
+WARNING: [Synth 8-327] inferring latch for variable 'I_i_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'next_last_phase_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:70]
+WARNING: [Synth 8-327] inferring latch for variable 'phase_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/incremental_quadrature.vhd:132]
+WARNING: [Synth 8-327] inferring latch for variable 'next_counter_i_reg' [/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ipshared/3874/src/simple_counter.vhd:89]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 345 ; free virtual = 8145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module incremental_quadrature 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   3 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 1     
+Module cart_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module cart_counter_v3_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port Z
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_cart_counter_v3_0_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/Z_i_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/cart_counter_v3_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/Z_i_reg' (FD) to 'U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/last_Z_i_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/last_Z_i_reg )
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/I_i_reg) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/cart_counter_inst/incr_quad_inst/last_Z_i_reg) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/cart_counter_v3_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_cart_counter_v3_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 332 ; free virtual = 8142
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 153 ; free virtual = 7809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 153 ; free virtual = 7809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 155 ; free virtual = 7807
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 205 ; free virtual = 7854
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 205 ; free virtual = 7854
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 205 ; free virtual = 7854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 205 ; free virtual = 7854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 204 ; free virtual = 7853
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 204 ; free virtual = 7853
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     3|
+|3     |LUT2   |    34|
+|4     |LUT3   |    13|
+|5     |LUT4   |    13|
+|6     |LUT5   |    34|
+|7     |LUT6   |    12|
+|8     |FDRE   |   148|
+|9     |FDSE   |     3|
+|10    |LD     |    38|
+|11    |LDC    |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+-----------------------------+------+
+|      |Instance                              |Module                       |Cells |
++------+--------------------------------------+-----------------------------+------+
+|1     |top                                   |                             |   308|
+|2     |  U0                                  |cart_counter_v3_v1_0         |   308|
+|3     |    cart_counter_v3_v1_0_S00_AXI_inst |cart_counter_v3_v1_0_S00_AXI |   308|
+|4     |      cart_counter_inst               |cart_counter                 |   151|
+|5     |        incr_quad_inst                |incremental_quadrature       |    38|
++------+--------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.176 ; gain = 438.535 ; free physical = 204 ; free virtual = 7853
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1560.176 ; gain = 109.496 ; free physical = 262 ; free virtual = 7911
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1560.184 ; gain = 438.535 ; free physical = 262 ; free virtual = 7911
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  LD => LDCE: 38 instances
+  LDC => LDCE: 2 instances
+
+47 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.184 ; gain = 451.129 ; free physical = 189 ; free virtual = 7790
+INFO: [Common 17-1381] The checkpoint '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.runs/design_1_cart_counter_v3_0_0_synth_1/design_1_cart_counter_v3_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.srcs/sources_1/bd/design_1/ip/design_1_cart_counter_v3_0_0/design_1_cart_counter_v3_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/thomas/Documents/school/master/semester_4/master/code/cart_counter_zed/cart_counter_zed.runs/design_1_cart_counter_v3_0_0_synth_1/design_1_cart_counter_v3_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.16 . Memory (MB): peak = 1584.188 ; gain = 0.000 ; free physical = 178 ; free virtual = 7620
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 10 20:45:09 2017...

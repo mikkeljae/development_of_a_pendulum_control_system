@@ -1,0 +1,302 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xspips.h"
+
+//GPIO DEFINES
+#define GPIO_0  XPAR_GPIO_0_DEVICE_ID
+#define GPIO_1  XPAR_GPIO_1_DEVICE_ID
+#define DELAY	10000
+
+//RF DEFINES
+#define SPI_DEVICE_ID XPAR_PS7_SPI_1_DEVICE_ID
+#define REGISTER_MASK 	0x1F			// to make sure only register is set
+#define RX_EMPTY_MASK	0b00000001		// RX_EMPTY BIT LOCATION
+#define ERX_P0_MASK		0b00000001
+
+// From NRF24 datasheet:
+#define W_REGISTER    	0x20
+#define R_REGISTER    	0x00
+#define RF_CONFIG		0x00
+#define RF_SETUP		0x06
+#define RF_STATUS		0x07
+#define RF_CH			0x05
+#define RF_RX_ADDR_P0	0x0A
+#define RF_EN_AA		0x01
+#define RF_FIFO_STATUS	0x17
+#define RF_RX_PW_P0		0x11
+#define RF_EN_RXADDR	0x02
+#define RF_SETUP_AW		0x03
+#define RF_SETUP_RETR	0x04
+#define SETUP_RETR		0x04
+
+//RF SETTINGS
+#define RF_SPEED_1MBPS	0b11010111	// RF SPEED = 1Mbps
+#define RF_SETTINGS		0b01110000 	//(RX_DR) |(TX_DS) | (MAX_RT)
+#define RF_CHANNEL		76
+#define FLUSH_TX		0b11100001
+#define FLUSH_RX		0b11100010
+#define PWR_UP_MASK		0b00000010
+#define RF_ADDRESS0		0b00110000
+#define RF_ADDRESS1		0b00110000
+#define RF_ADDRESS2		0b00110001
+#define PRIM_RX_MASK	0b00000001	// SET PRIM_RX TO RX
+#define R_RX_PAYLOAD	0b01100001
+#define PAYLOAD_SIZE	32
+#define RF_NO_ACK		0b00000000
+#define RF_3_B_ADDR		0b00000001
+#define RF_NO_RETRANS	0b00000000
+
+
+
+static XSpiPs SPI;
+XGpio Gpio_CE;
+
+s32 SPI_init(XSpiPs *SPI_inst, int device_id);
+void RF_write_register(XSpiPs *SPI_inst, u8 reg, u8 value);
+u8 RF_read_register(XSpiPs *SPI_inst, u8 reg);
+void RF_begin(XSpiPs *SPI_inst);
+void RF_send_command(XSpiPs *SPI_inst, u8 command);
+void RF_power_up(XSpiPs *SPI_inst);
+void RF_start_listening(XSpiPs *SPI_inst);
+void RF_read(XSpiPs *SPI_inst, u8 *buffer);
+s8 RF_available(XSpiPs *SPI_inst);
+void RF_open_reading_pipe(XSpiPs *SPI_inst);
+void RF_write_address(XSpiPs *SPI_inst, u8 reg, u8 *addr);
+
+int main()
+{
+    init_platform();
+
+	int status;
+	volatile int Delay;
+
+	/* Initialize the GPIO driver */
+	status = XGpio_Initialize(&Gpio_CE, GPIO_0);
+	XGpio_DiscreteWrite(&Gpio_CE, 1, 0);		// Set CE low
+
+	status = SPI_init(&SPI, SPI_DEVICE_ID);
+	if (status != XST_SUCCESS) {
+		xil_printf("SPI init failed!\r\n");
+	}else{
+		xil_printf("SPI init succeded!\r\n");
+	}
+
+	RF_begin(&SPI);
+
+	for (Delay = 0; Delay < DELAY; Delay++);
+	RF_open_reading_pipe(&SPI);
+	RF_start_listening(&SPI);
+
+
+	u8 buffer[PAYLOAD_SIZE];
+
+	while(1){
+
+				//DEBUG!!
+				status = RF_read_register(&SPI, RF_FIFO_STATUS);
+				xil_printf("status = %d \r\n",status);
+
+				status = RF_available(&SPI);
+
+				if(status == 1){
+					xil_printf("abail\r\n");
+					RF_read(&SPI,buffer);
+					int i;
+					for(i = 0; i< PAYLOAD_SIZE; i++){
+						xil_printf("%c",buffer[i]);
+					}
+					xil_printf("\r\n");
+				}
+				// There needs to be some wait here.
+				for (Delay = 0; Delay < 10000; Delay++);
+		}
+
+
+	/*
+	while(1){
+
+			//DEBUG!!
+			//status = RF_read_register(&SPI, RF_FIFO_STATUS);
+			//xil_printf("status = %d \r\n",status);
+
+			status = RF_available(&SPI);
+
+			if(status == 1){
+				RF_read(&SPI,buffer);
+				int i;
+				for(i = 0; i< PAYLOAD_SIZE; i++){
+					xil_printf("%c",buffer[i]);
+				}
+				xil_printf("\r\n");
+			}
+			// There needs to be some wait here.
+			for (Delay = 0; Delay < 10000; Delay++);
+	}
+*/
+    cleanup_platform();
+    return 0;
+}
+
+
+s32 SPI_init(XSpiPs *SPI_inst, int device_id){
+
+	int status;
+	XSpiPs_Config *SPI_config;
+
+	// Initialize the SPI device.
+	SPI_config = XSpiPs_LookupConfig(device_id);
+	if (NULL == SPI_config) {
+		return XST_FAILURE;
+	}
+
+	status = XSpiPs_CfgInitialize(SPI_inst, SPI_config, SPI_config->BaseAddress);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Perform a self-test to check hardware build.
+	status = XSpiPs_SelfTest(SPI_inst);
+	if (status != XST_SUCCESS) {
+		xil_printf("SPI SELFTEST Failed\r\n");
+		return XST_FAILURE;
+	}
+	xil_printf("SPI SELFTEST SUCCEDED\r\n");
+
+	// Set the SPI device with settings.
+	XSpiPs_SetOptions(SPI_inst, XSPIPS_MANUAL_START_OPTION | XSPIPS_MASTER_OPTION | XSPIPS_FORCE_SSELECT_OPTION  );
+	u32 config_ref;
+	config_ref = XSpiPs_ReadReg(SPI_inst->Config.BaseAddress, XSPIPS_CR_OFFSET);
+	config_ref |= XSPIPS_CR_MANSTRT_MASK;
+	XSpiPs_WriteReg(SPI_inst->Config.BaseAddress,XSPIPS_CR_OFFSET, config_ref);
+
+
+	// Set the SPI device pre-scalar to divide by 32, which is 5MHz SPI Clock in this case
+	XSpiPs_SetClkPrescaler(SPI_inst, XSPIPS_CLK_PRESCALE_256);
+
+	// Set slave select to 0
+	status = XSpiPs_SetSlaveSelect(SPI_inst, (u8) 0);
+	if (status != XST_SUCCESS) {
+		xil_printf("Slave Selection failed\r\n");
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
+
+void RF_write_register(XSpiPs *SPI_inst, u8 reg, u8 value){
+	u8 cmd_addr =  (W_REGISTER | ( REGISTER_MASK & reg));
+	u8 output_buffer[] = {cmd_addr, value};
+	XSpiPs_PolledTransfer(SPI_inst, output_buffer, NULL, 2);  //Send 2 bytes. Don't receive anything
+}
+
+u8 RF_read_register(XSpiPs *SPI_inst, u8 reg){
+	u8 output =  (R_REGISTER | ( REGISTER_MASK & reg));
+	u8 input_buffer[2];
+	u8 output_buffer[] = {output, 0b11111111};
+	XSpiPs_PolledTransfer(SPI_inst, output_buffer, input_buffer, 2); 	//Send 2 bytes. Receive 1 byte
+
+	return input_buffer[1];
+}
+
+void RF_begin(XSpiPs *SPI_inst){
+	// Reset config register and set 1 byte CRC
+	RF_write_register(&SPI,RF_CONFIG, 0x08);
+
+	//Read setup register
+	u8 setup = RF_read_register(&SPI, RF_SETUP);
+
+	// Set 1Mbps
+	setup = setup & RF_SPEED_1MBPS;
+	RF_write_register(&SPI, RF_SETUP, setup);
+
+	// Write to channel register that channel is 76
+	RF_write_register(&SPI, RF_CH, RF_CHANNEL);
+
+	// Disable Auto Acknowledgment
+	RF_write_register(&SPI, RF_EN_AA, RF_NO_ACK);
+
+	// Setup of Address Widths. 3 bytes.
+	RF_write_register(&SPI,RF_SETUP_AW, RF_3_B_ADDR);
+
+	// Setup of no Automatic Retransmission
+	RF_write_register(&SPI, RF_SETUP_RETR, RF_NO_RETRANS);
+
+	// Flush buffers
+	RF_send_command(&SPI, FLUSH_RX);
+	RF_send_command(&SPI, FLUSH_TX);
+
+	// Startup the RF to Standy-I
+	RF_power_up(&SPI);
+
+	u8 config = RF_read_register(&SPI, RF_CONFIG);
+	RF_write_register(&SPI, RF_CONFIG , config | PRIM_RX_MASK);
+}
+
+void RF_send_command(XSpiPs *SPI_inst, u8 command){
+	XSpiPs_PolledTransfer(SPI_inst, &command, NULL, 1); 	//Send 1 byte
+}
+
+void RF_power_up(XSpiPs *SPI_inst){
+	// Read config register and set PWR_UP to 1
+	u8 config = RF_read_register(&SPI, RF_CONFIG);
+	config = config | PWR_UP_MASK;
+	RF_write_register(&SPI, RF_CONFIG, config);
+	// Then wait. Max time until CE is allowed to be set high is 4.5ms according to datasheet p. 24
+	// Wait is measured to be 5ms
+	int delay;
+	int max_delay = 400000;
+	for(delay = 0; delay < max_delay; delay++);
+}
+
+void RF_start_listening(XSpiPs *SPI_inst){
+	XGpio_DiscreteWrite(&Gpio_CE, 1, 1);
+
+	// Then wait. 130us to datasheet p. 22
+	// Wait is measured to be 160 uS
+	int delay;
+	int max_delay = 13000;
+	for(delay = 0; delay < max_delay; delay++){};
+	RF_send_command(&SPI, FLUSH_TX);
+}
+
+void RF_read(XSpiPs *SPI_inst, u8 *buffer){
+	u8 input_buffer[PAYLOAD_SIZE+1], output_buffer[PAYLOAD_SIZE+1];
+	output_buffer[0] = R_RX_PAYLOAD;
+	XSpiPs_PolledTransfer(SPI_inst, output_buffer, input_buffer, PAYLOAD_SIZE+1); 	//Send 33 bytes. Receive 32 bytes
+	int i;
+	for(i = 1; i < PAYLOAD_SIZE+1; i++){
+		buffer[i-1] = input_buffer[i];
+	}
+}
+
+s8 RF_available(XSpiPs *SPI_inst){
+	s8 status;
+	u8 fifo_status = RF_read_register(&SPI, RF_FIFO_STATUS);
+	fifo_status = fifo_status & RX_EMPTY_MASK;	//Only look at RX_EMPTY_MASK bit
+
+	if(fifo_status){	// FIFO is empty
+		status = 0;
+	}else{
+		status = 1;		// FIFO is not empty
+	}
+	return status;
+}
+
+void RF_open_reading_pipe(XSpiPs *SPI_inst){
+	u8 rf_address[] = {RF_ADDRESS0, RF_ADDRESS1, RF_ADDRESS2};
+	RF_write_address(&SPI, RF_RX_ADDR_P0, rf_address);
+	RF_write_register(&SPI, RF_RX_PW_P0, PAYLOAD_SIZE);		// PAYLOAD SIZE
+	u8 register_val = RF_read_register(&SPI ,RF_EN_RXADDR);
+	register_val = register_val | ERX_P0_MASK;
+	RF_write_register(&SPI, RF_EN_RXADDR, register_val);
+}
+
+void RF_write_address(XSpiPs *SPI_inst, u8 reg, u8 *addr){
+	u8 output_buffer[]  = {(W_REGISTER | ( REGISTER_MASK & reg)), addr[0], addr[1], addr[2]};
+	XSpiPs_PolledTransfer(SPI_inst, output_buffer, NULL, 4); 	//Send 4 bytes. Receive nothing
+}
+

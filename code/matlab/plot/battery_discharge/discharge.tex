@@ -1,0 +1,80 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=0,
+xmax=450,
+xlabel style={font=\color{white!15!black}},
+xlabel={Time [Min]},
+ymin=2.5,
+ymax=4.5,
+ytick={2.5,   3, 3.5,   4, 4.5},
+ylabel style={font=\color{white!15!black}},
+ylabel={Voltage [V]},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+title={Discharge Curve of Li-Ion Battery}
+]
+\addplot [color=mycolor1, forget plot]
+  table[row sep=crcr]{%
+0	4.072\\
+10	4.02699999999999\\
+20	4.00799999999998\\
+40	3.95999999999998\\
+50	3.92200000000003\\
+60	3.89499999999998\\
+70	3.87900000000002\\
+80	3.85500000000002\\
+90	3.84300000000002\\
+100	3.81799999999998\\
+110	3.79700000000003\\
+120	3.78899999999999\\
+130	3.77699999999999\\
+140	3.767\\
+150	3.75299999999999\\
+160	3.76100000000002\\
+170	3.75999999999999\\
+180	3.74000000000001\\
+190	3.72500000000002\\
+200	3.71300000000002\\
+210	3.714\\
+220	3.69999999999999\\
+230	3.71100000000001\\
+240	3.71199999999999\\
+250	3.69999999999999\\
+260	3.69299999999998\\
+270	3.69099999999997\\
+280	3.69799999999998\\
+290	3.69099999999997\\
+300	3.68099999999998\\
+310	3.673\\
+320	3.65699999999998\\
+330	3.64499999999998\\
+340	3.63499999999999\\
+350	3.62299999999999\\
+360	3.60700000000003\\
+370	3.61399999999998\\
+380	3.596\\
+390	3.56799999999998\\
+400	3.505\\
+410	3.36099999999999\\
+414.551694551695	2.30000000000001\\
+};
+\addplot [color=red, dashed, forget plot]
+  table[row sep=crcr]{%
+0	3.30000000000001\\
+450	3.30000000000001\\
+};
+\end{axis}
+\end{tikzpicture}%

@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Dec 15 18:00:37 2017
+# Process ID: 5307
+# Current directory: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_xbar_0_synth_1
+# Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
+# Log file: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_xbar_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_xbar_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1208.480 ; gain = 76.996 ; free physical = 156 ; free virtual = 10655
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_axi_crossbar' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_crossbar_sasd' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_addr_decoder' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (2#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_addr_decoder' (3#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_decerr_slave' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_decerr_slave' (4#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_addr_arbiter_sasd' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_addr_arbiter_sasd' (5#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_splitter' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_splitter' (6#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_14_splitter__parameterized0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_splitter__parameterized0' (6#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (7#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (7#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (7#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_13_axic_register_slice' (8#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/55c0/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (8#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_crossbar_sasd' (9#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_14_axi_crossbar' (10#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbar_0' (11#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.980 ; gain = 197.496 ; free physical = 222 ; free virtual = 10559
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1328.980 ; gain = 197.496 ; free physical = 197 ; free virtual = 10562
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1589.965 ; gain = 0.000 ; free physical = 170 ; free virtual = 10283
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 143 ; free virtual = 10320
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 143 ; free virtual = 10320
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 142 ; free virtual = 10319
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 147 ; free virtual = 10309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 153 ; free virtual = 10243
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 121 ; free virtual = 10683
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1589.965 ; gain = 458.480 ; free physical = 128 ; free virtual = 10625
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 162 ; free virtual = 10624
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 150 ; free virtual = 10625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 149 ; free virtual = 10626
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 140 ; free virtual = 10627
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 139 ; free virtual = 10626
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 135 ; free virtual = 10627
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 134 ; free virtual = 10627
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    11|
+|3     |LUT3 |    47|
+|4     |LUT4 |    43|
+|5     |LUT5 |    22|
+|6     |LUT6 |    98|
+|7     |FDRE |   131|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1590.973 ; gain = 459.488 ; free physical = 133 ; free virtual = 10627
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1590.980 ; gain = 472.082 ; free physical = 183 ; free virtual = 10656

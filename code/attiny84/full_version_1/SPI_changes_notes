@@ -1,0 +1,51 @@
+SPI changes:
+
+CONFIG => only one byte CRC => CRCO = 0
+== X
+
+STill 1Mbps speed - Should be changed?
+
+
+EN_AA => Disable Auto Acknowledgment
+  	RF_write_register(RF_EN_AA, RF_NO_ACK);
+	#define RF_EN_AA		0x01
+	#define RF_NO_ACK		0b00000000
+== X
+
+SETUP_AW => 3 byte addresses
+  	// Setup of Address Widths. 3 bytes.
+  	RF_write_register(RF_SETUP_AW, RF_3_B_ADDR);
+	#define RF_SETUP_AW		0x03
+	#define RF_3_B_ADDR		0b00000001
+== X
+
+SETUP_RETR => no retransmission
+  	// Setup of no Automatic Retransmission
+  	RF_write_register(RF_SETUP_RETR, RF_NO_RETRANS);
+	#define RF_SETUP_RETR	0x04
+	#define RF_NO_RETRANS	0b00000000
+== X
+
+=> delete RF_set_TX_power and set RF_power in RF_begin
+	RF_MAX_OUT_P
+  	// Set 1Mbps & MAX transmission power
+  	RF_write_register(RF_SETUP, RF_SETUP_SET);
+== function is not there, so nothing to do ?
+
+write_address => 
+
+	void RF_write_address(uint8_t reg, uint8_t *addr){
+  	uint8_t output_buffer[]  = {(W_REGISTER | ( REGISTER_MASK & reg)), addr[0], addr[1], addr[2]};
+  	spi_transfer(output_buffer, NULL, 4);  //Send 6 bytes. Receive nothing
+	}
+
+  	#define RF_ADDRESS0		0b00110000
+	#define RF_ADDRESS1		0b00110000
+	#define RF_ADDRESS2		0b00110001
+RF_open_reading_pipe => deleted two addresses
+
+== X
+
+
+
+Furthermore => payload size should be adjusted

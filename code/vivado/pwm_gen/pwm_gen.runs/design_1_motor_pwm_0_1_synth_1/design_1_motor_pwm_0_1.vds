@@ -1,0 +1,353 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Dec  1 16:01:15 2017
+# Process ID: 28384
+# Current directory: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_motor_pwm_0_1_synth_1
+# Command line: vivado -log design_1_motor_pwm_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_motor_pwm_0_1.tcl
+# Log file: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_motor_pwm_0_1_synth_1/design_1_motor_pwm_0_1.vds
+# Journal file: /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_motor_pwm_0_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_motor_pwm_0_1.tcl -notrace
+Command: synth_design -top design_1_motor_pwm_0_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28389 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1192.641 ; gain = 69.996 ; free physical = 141 ; free virtual = 8738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_motor_pwm_0_1' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_motor_pwm_0_1/synth/design_1_motor_pwm_0_1.vhd:84]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'motor_pwm_v1_0' declared at '/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0.vhd:5' bound to instance 'U0' of component 'motor_pwm_v1_0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_motor_pwm_0_1/synth/design_1_motor_pwm_0_1.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'motor_pwm_v1_0' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0.vhd:50]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'motor_pwm_v1_0_S00_AXI' declared at '/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:5' bound to instance 'motor_pwm_v1_0_S00_AXI_inst' of component 'motor_pwm_v1_0_S00_AXI' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'motor_pwm_v1_0_S00_AXI' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:87]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:237]
+INFO: [Synth 8-226] default block is never used [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:367]
+INFO: [Synth 8-3491] module 'pwm_gen' declared at '/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:5' bound to instance 'pwm_gen_inst' of component 'pwm_gen' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:400]
+INFO: [Synth 8-638] synthesizing module 'pwm_gen' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:16]
+WARNING: [Synth 8-614] signal 'comp_value' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:32]
+WARNING: [Synth 8-614] signal 'dir' is read in the process but is not in the sensitivity list [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'pwm_gen' (1#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:16]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:235]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:366]
+INFO: [Synth 8-256] done synthesizing module 'motor_pwm_v1_0_S00_AXI' (2#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0_S00_AXI.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'motor_pwm_v1_0' (3#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/hdl/motor_pwm_v1_0.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'design_1_motor_pwm_0_1' (4#1) [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_motor_pwm_0_1/synth/design_1_motor_pwm_0_1.vhd:84]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design motor_pwm_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1233.141 ; gain = 110.496 ; free physical = 188 ; free virtual = 8745
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1233.141 ; gain = 110.496 ; free physical = 167 ; free virtual = 8746
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1562.180 ; gain = 0.000 ; free physical = 191 ; free virtual = 8500
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 164 ; free virtual = 8570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 163 ; free virtual = 8570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 163 ; free virtual = 8571
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "top" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "top" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'top_reg' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:36]
+WARNING: [Synth 8-327] inferring latch for variable 'next_counter_reg' [/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ipshared/5ae1/src/pwm_gen.vhd:28]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 136 ; free virtual = 8564
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   3 Input     12 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pwm_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     12 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module motor_pwm_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "U0/motor_pwm_v1_0_S00_AXI_inst/pwm_gen_inst/next_state" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_motor_pwm_0_1 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/motor_pwm_v1_0_S00_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/motor_pwm_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/motor_pwm_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/motor_pwm_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/motor_pwm_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/motor_pwm_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/motor_pwm_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/pwm_gen_inst/top_reg) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/aw_en_reg) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module design_1_motor_pwm_0_1.
+INFO: [Synth 8-3332] Sequential element (U0/motor_pwm_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module design_1_motor_pwm_0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 144 ; free virtual = 8552
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 152 ; free virtual = 8421
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1562.180 ; gain = 439.535 ; free physical = 152 ; free virtual = 8421
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 149 ; free virtual = 8419
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |    24|
+|3     |LUT2   |     4|
+|4     |LUT3   |     3|
+|5     |LUT4   |    43|
+|6     |LUT5   |     3|
+|7     |LUT6   |    36|
+|8     |FDRE   |   181|
+|9     |FDSE   |     2|
+|10    |LD     |    12|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------------------+-----------------------+------+
+|      |Instance                        |Module                 |Cells |
++------+--------------------------------+-----------------------+------+
+|1     |top                             |                       |   316|
+|2     |  U0                            |motor_pwm_v1_0         |   316|
+|3     |    motor_pwm_v1_0_S00_AXI_inst |motor_pwm_v1_0_S00_AXI |   316|
+|4     |      pwm_gen_inst              |pwm_gen                |    87|
++------+--------------------------------+-----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.195 ; gain = 441.551 ; free physical = 150 ; free virtual = 8420
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1564.195 ; gain = 112.512 ; free physical = 207 ; free virtual = 8477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1564.203 ; gain = 441.551 ; free physical = 207 ; free virtual = 8478
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  LD => LDCE: 12 instances
+
+42 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.203 ; gain = 454.145 ; free physical = 167 ; free virtual = 8446
+INFO: [Common 17-1381] The checkpoint '/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_motor_pwm_0_1_synth_1/design_1_motor_pwm_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.srcs/sources_1/bd/design_1/ip/design_1_motor_pwm_0_1/design_1_motor_pwm_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/thomas/Documents/school/master/semester_4/master/code/axi_testing/pwm_gen/pwm_gen.runs/design_1_motor_pwm_0_1_synth_1/design_1_motor_pwm_0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1588.207 ; gain = 0.000 ; free physical = 154 ; free virtual = 8446
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  1 16:01:54 2017...

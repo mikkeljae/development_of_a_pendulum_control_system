@@ -1,0 +1,10 @@
+two NRF facing each other with ca. 7 cm between
+
+No_motion: the joint is held still
+Motion: the joint is moving 180 degrees.
+
+
+10.000 32 bytes payloads are sent with 1ms between them.
+each received is counted
+
+The version of c code is in the folder.

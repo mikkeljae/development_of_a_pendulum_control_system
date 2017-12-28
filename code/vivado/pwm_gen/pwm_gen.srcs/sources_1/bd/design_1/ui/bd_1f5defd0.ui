@@ -1,0 +1,39 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 50 -defaultsOSRD
+preplace port dis -pg 1 -y 240 -defaultsOSRD
+preplace port m_relay -pg 1 -y 260 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 70 -defaultsOSRD
+preplace port pwm_b_l -pg 1 -y 400 -defaultsOSRD
+preplace port em_mcu -pg 1 -y 220 -defaultsOSRD
+preplace port pwm_a_l -pg 1 -y 380 -defaultsOSRD
+preplace port inrush -pg 1 -y 280 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 270 -defaultsOSRD
+preplace inst interface_0 -pg 1 -lvl 3 -y 250 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 350 -defaultsOSRD
+preplace inst motor_pwm_0 -pg 1 -lvl 3 -y 390 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 50 NJ 50 NJ
+preplace netloc interface_0_em_mcu 1 3 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 460 480 790
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 440 440
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 780
+preplace netloc interface_0_dis 1 3 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 70 NJ 70 NJ
+preplace netloc interface_0_m_relay 1 3 1 NJ
+preplace netloc interface_0_inrush 1 3 1 NJ
+preplace netloc motor_pwm_0_pwm_b_l 1 3 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 260 470 470 770
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N
+preplace netloc motor_pwm_0_pwm_a_l 1 3 1 NJ
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 450
+levelinfo -pg 1 0 230 620 920 1070 -top 0 -bot 490
+",
+}
+{
+   da_axi4_cnt: "7",
+   da_board_cnt: "1",
+   da_ps7_cnt: "1",
+}

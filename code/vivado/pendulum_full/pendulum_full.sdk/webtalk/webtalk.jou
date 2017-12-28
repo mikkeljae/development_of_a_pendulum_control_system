@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# 
+# Start of session at: Fri Dec  8 17:08:29 2017
+# Process ID: 4049
+# Current directory: /home/thomas/Documents/school/master/semester_4/master/code/pendulum_full/pendulum_full.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/thomas/Documents/school/master/semester_4/master/code/pendulum_full/pendulum_full.sdk/webtalk/webtalk.log
+# Journal file: /home/thomas/Documents/school/master/semester_4/master/code/pendulum_full/pendulum_full.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
