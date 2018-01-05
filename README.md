@@ -17,5 +17,5 @@ This directory contains all data that is collected through the work on the pendu
 ##### *schematics* 
 This directory contains the newest versions of the joint board and controller board schematics along with the schematics for the developed prototype PCBs.
 
-
-
+##### *mechanics* 
+This directory contains all the mechanical parts designed in inventor.
